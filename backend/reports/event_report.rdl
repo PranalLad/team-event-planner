@@ -1,0 +1,32 @@
+<!-- Placeholder RDL file for Event Report.
+This is a minimal placeholder. For full Bold Reports usage, upload a real RDL to Bold Reports server.
+The report expects parameters: TenantId, StartDate, EndDate, ReportGeneratedOn.
+-->
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <Body>
+    <ReportItems>
+      <Textbox Name="txtGeneratedOn">
+        <Value>=Parameters!ReportGeneratedOn.Value</Value>
+        <Style>
+          <FontSize>10pt</FontSize>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>2in</Height>
+  </Body>
+  <ReportParameters>
+    <ReportParameter Name="TenantId">
+      <DataType>String</DataType>
+    </ReportParameter>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+    </ReportParameter>
+    <ReportParameter Name="ReportGeneratedOn">
+      <DataType>DateTime</DataType>
+    </ReportParameter>
+  </ReportParameters>
+</Report>
