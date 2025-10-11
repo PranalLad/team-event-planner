@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamEventPlanner.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0fcad5ea64087b687665bbe8047077cd29400c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79687332e376949feda0a21130b82359d5d9c321")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamEventPlanner.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamEventPlanner.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,42 @@
+# Node.js / React
+node_modules/
+build/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# React specific
+public/*.html
+public/*.ico
+public/*.json
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.vsidx
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Backend temporary files
+dist/
+tmp/
+*.temp
