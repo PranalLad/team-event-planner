@@ -1,0 +1,16 @@
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\bin\Release\net8.0\TeamEventPlanner.Infrastructure.deps.json
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\bin\Release\net8.0\TeamEventPlanner.Infrastructure.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\bin\Release\net8.0\TeamEventPlanner.Infrastructure.pdb
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\bin\Release\net8.0\TeamEventPlanner.Core.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\bin\Release\net8.0\TeamEventPlanner.Core.pdb
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEventPlanner.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEventPlanner.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEventPlanner.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEventPlanner.Infrastructure.AssemblyInfo.cs
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEventPlanner.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEventPlanner.Infrastructure.sourcelink.json
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEven.A88BF70C.Up2Date
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEventPlanner.Infrastructure.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\refint\TeamEventPlanner.Infrastructure.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\TeamEventPlanner.Infrastructure.pdb
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Infrastructure\obj\Release\net8.0\ref\TeamEventPlanner.Infrastructure.dll

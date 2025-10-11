@@ -1,7 +1,7 @@
 ﻿// frontend/src/services/api.ts
 import axios from "axios";
 
-const API_BASE = process.env.REACT_APP_API_BASE ?? "https://localhost:59497";
+const API_BASE = process.env.REACT_APP_API_BASE ?? "https://teameventplannerapi-g4hge8h2ghach2ag.canadacentral-01.azurewebsites.net";
 
 const axiosInstance = axios.create({
   baseURL: API_BASE,

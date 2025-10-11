@@ -174,4 +174,5 @@ C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.A
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Api\obj\Debug\net8.0\ref\TeamEventPlanner.Api.dll
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Api\bin\Debug\net8.0\appsettings.json
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Api\bin\Debug\net8.0\bin\Debug\net8.0\appsettings.json
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Api\obj\Debug\net8.0\TeamEventPlanner.Api.sourcelink.json
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

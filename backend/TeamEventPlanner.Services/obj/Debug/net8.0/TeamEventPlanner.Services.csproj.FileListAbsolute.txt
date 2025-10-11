@@ -13,3 +13,4 @@ C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.S
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Services\obj\Debug\net8.0\refint\TeamEventPlanner.Services.dll
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Services\obj\Debug\net8.0\TeamEventPlanner.Services.pdb
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Services\obj\Debug\net8.0\ref\TeamEventPlanner.Services.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Services\obj\Debug\net8.0\TeamEventPlanner.Services.sourcelink.json

@@ -12,6 +12,18 @@
           "bin/placeholder/TeamEventPlanner.Core.dll": {}
         }
       }
+    },
+    "net8.0/win-x86": {
+      "TeamEventPlanner.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TeamEventPlanner.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TeamEventPlanner.Core.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -96,6 +108,11 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x86": {
+        "#import": []
       }
     }
   }

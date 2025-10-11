@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2025-10-11T17:08:04.4062024Z||;False|2025-10-11T22:33:59.8409122+05:30||;False|2025-10-11T22:26:13.1015072+05:30||;True|2025-10-11T21:59:59.8578775+05:30||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:desktop5l53321sqlexpress1.database.windows.net,1433%3bInitial Catalog=TeamEventPlannerDb%3bPersist Security Info=False%3bUser ID=PranalDB%3bPassword=Pranal%401516%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="TeamEventPlanner.Infrastructure.Data.AppDbContext">
+      <Value>Server=tcp:desktop5l53321sqlexpress1.database.windows.net,1433%3bInitial Catalog=TeamEventPlannerDb%3bPersist Security Info=False%3bUser ID=PranalDB%3bPassword=Pranal%401516%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

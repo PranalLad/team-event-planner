@@ -156,3 +156,4 @@ C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\tests\TeamEventPla
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\tests\TeamEventPlanner.Tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\tests\TeamEventPlanner.Tests\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\tests\TeamEventPlanner.Tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\tests\TeamEventPlanner.Tests\obj\Debug\net8.0\TeamEventPlanner.Tests.sourcelink.json

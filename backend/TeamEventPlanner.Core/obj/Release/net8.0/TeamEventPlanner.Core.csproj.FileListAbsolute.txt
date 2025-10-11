@@ -1,0 +1,12 @@
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\bin\Release\net8.0\TeamEventPlanner.Core.deps.json
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\bin\Release\net8.0\TeamEventPlanner.Core.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\bin\Release\net8.0\TeamEventPlanner.Core.pdb
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\TeamEventPlanner.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\TeamEventPlanner.Core.AssemblyInfoInputs.cache
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\TeamEventPlanner.Core.AssemblyInfo.cs
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\TeamEventPlanner.Core.csproj.CoreCompileInputs.cache
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\TeamEventPlanner.Core.sourcelink.json
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\TeamEventPlanner.Core.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\refint\TeamEventPlanner.Core.dll
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\TeamEventPlanner.Core.pdb
+C:\Users\pranal.gurunath\Downloads\team-event-planner\backend\TeamEventPlanner.Core\obj\Release\net8.0\ref\TeamEventPlanner.Core.dll
