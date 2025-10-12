@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamEventPlanner.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0fcad5ea64087b687665bbe8047077cd29400c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+129861f6fb1bd6d2f43b9d8e42fd2ff2ae43e96a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamEventPlanner.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamEventPlanner.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

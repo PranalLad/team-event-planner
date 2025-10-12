@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WephGxvWk7Q=",
+  "dgSpecHash": "zEGEtF1P1I0=",
   "success": true,
   "projectFilePath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Api\\TeamEventPlanner.Api.csproj",
   "expectedPackageFiles": [
@@ -47,14 +47,14 @@
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.35.0\\microsoft.identitymodel.tokens.6.35.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
-    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.openapi\\1.6.25\\microsoft.openapi.1.6.25.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\runtime.any.system.runtime\\4.3.0\\runtime.any.system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\runtime.any.system.text.encoding\\4.3.0\\runtime.any.system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.6\\swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
@@ -91,7 +91,10 @@
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\system.text.json\\9.0.9\\system.text.json.9.0.9.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.19\\microsoft.netcore.app.runtime.win-x86.8.0.19.nupkg.sha512",
+    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.19\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.19.nupkg.sha512",
+    "C:\\Users\\pranal.gurunath\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.19\\microsoft.aspnetcore.app.runtime.win-x86.8.0.19.nupkg.sha512"
   ],
   "logs": []
 }

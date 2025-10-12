@@ -3,7 +3,4 @@
   <parameter name="IIS Web Application Name" description="" value="TeamEventPlannerApi" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\pranal\.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner\.Api\\obj\\Release\\net8\.0\\win-x86\\PubTmp\\Out\\$" />
   </parameter>
-  <parameter name="TeamEventPlanner.Infrastructure.Data.AppDbContext" description="" value="Server=tcp:desktop5l53321sqlexpress1.database.windows.net,1433;Initial Catalog=TeamEventPlannerDb;Persist Security Info=False;User ID=PranalDB;Password=Pranal@1516;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\pranal\.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner\.Api\\obj\\Release\\net8\.0\\win-x86\\PubTmp\\EFSQLScripts\\TeamEventPlanner\.Infrastructure\.Data\.AppDbContext\.sql$" />
-  </parameter>
 </parameters>
