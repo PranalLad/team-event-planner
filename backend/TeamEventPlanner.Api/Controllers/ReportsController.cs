@@ -35,5 +35,16 @@ namespace TeamEventPlanner.Api.Controllers
 
             return Ok(response);
         }
+
+        [HttpGet("event-report")]
+        public IActionResult GetEventReport()
+        {
+            // Path to your RDL
+            var reportPath = Path.Combine(@"C:\", "reports", "event_report.rdl");
+            //var reportPath = Path.Combine(Directory.GetCurrentDirectory(), "reports", "event_report.rdl");
+
+            // Return RDL file as JSON for Bold Reports React Viewer
+            return File(System.IO.File.ReadAllBytes(reportPath), "application/octet-stream");
+        }
     }
 }
