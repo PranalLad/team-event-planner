@@ -2,11 +2,18 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import EventsPage from './pages/EventsPage';
 import ReportsPage from './pages/ReportsPage';
+import BoldReportsPage from './pages/BoldReportsPage';
+
+const navItems = [
+  { name: 'Events', path: '/' },
+  { name: 'Reports', path: '/reports' },
+  { name: 'Bold Reports', path: '/BoldReportsPage' },
+];
 
 const App: React.FC = () => (
   <Router>
     <header style={{
-      backgroundColor: "#f8f9fa", // Light gray / off-white
+      backgroundColor: "#f8f9fa",
       color: "#333",
       padding: "1rem 2rem",
       display: "flex",
@@ -18,27 +25,23 @@ const App: React.FC = () => (
     }}>
       <h1 style={{ margin: 0, fontSize: "1.5rem" }}>Team Event Planner – Reports Edition</h1>
       <nav style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>
-        {["Events", "Reports"].map((item) => {
-          const path = item === "Events" ? "/" : "/reports";
-          return (
-            <NavLink
-              key={item}
-              to={path}
-              style={({ isActive }) => ({
-                padding: "0.5rem 1rem",
-                borderRadius: "8px",
-                backgroundColor: isActive ? "#007bff" : "transparent",
-                color: isActive ? "#fff" : "#555",
-                textDecoration: "none",
-                fontWeight: isActive ? "bold" : "normal",
-                transition: "all 0.2s ease",
-              })}
-              className="nav-link"
-            >
-              {item}
-            </NavLink>
-          );
-        })}
+        {navItems.map((item) => (
+          <NavLink
+            key={item.name}
+            to={item.path}
+            style={({ isActive }) => ({
+              padding: "0.5rem 1rem",
+              borderRadius: "8px",
+              backgroundColor: isActive ? "#007bff" : "transparent",
+              color: isActive ? "#fff" : "#555",
+              textDecoration: "none",
+              fontWeight: isActive ? "bold" : "normal",
+              transition: "all 0.2s ease",
+            })}
+          >
+            {item.name}
+          </NavLink>
+        ))}
       </nav>
     </header>
 
@@ -46,6 +49,7 @@ const App: React.FC = () => (
       <Routes>
         <Route path="/" element={<EventsPage />} />
         <Route path="/reports" element={<ReportsPage />} />
+        <Route path="/BoldReportsPage" element={<BoldReportsPage />} />
       </Routes>
     </main>
   </Router>

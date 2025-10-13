@@ -72,6 +72,50 @@
           }
         }
       }
+    },
+    "/api/Reports/event-report": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Reports/Bold": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "start",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "query",
+            "name": "end",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "query",
+            "name": "clientLocalTime",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
     }
   },
   "definitions": {

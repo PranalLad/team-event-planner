@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
     "RelativePath": "",
     "HttpMethod": "GET",
     "IsController": false,
@@ -45,6 +45,32 @@
   },
   {
     "ContainingType": "TeamEventPlanner.Api.Controllers.ReportsController",
+    "Method": "GetBoldReportData",
+    "RelativePath": "api/Reports/Bold",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "start",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "clientLocalTime",
+        "Type": "System.DateTimeOffset",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeamEventPlanner.Api.Controllers.ReportsController",
     "Method": "GetReportData",
     "RelativePath": "api/Reports/data",
     "HttpMethod": "GET",
@@ -67,6 +93,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeamEventPlanner.Api.Controllers.ReportsController",
+    "Method": "GetEventReport",
+    "RelativePath": "api/Reports/event-report",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

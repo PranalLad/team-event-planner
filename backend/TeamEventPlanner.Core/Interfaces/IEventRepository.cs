@@ -10,5 +10,7 @@ namespace TeamEventPlanner.Core.Interfaces
         Task<Event> AddAsync(Event ev);
         Task<IEnumerable<EventSummary>> GetEventsByTenantAndDateRangeAsync(Guid tenantId, DateTime startUtc, DateTime endUtc);
         Task<IEnumerable<Event>> GetEventsByTenantAsync(Guid tenantId);
+
+        Task<IEnumerable<EventReportDto>> GetEventsByTenantAndDateRangeAsync1(Guid tenantId, DateTime startUtc, DateTime endUtc);
     }
 }
