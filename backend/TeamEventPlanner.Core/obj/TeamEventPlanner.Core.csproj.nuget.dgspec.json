@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {}
+    "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {
+    "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj",
+        "projectUniqueName": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj",
         "projectName": "TeamEventPlanner.Core",
-        "projectPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj",
+        "projectPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj",
         "packagesPath": "C:\\Users\\pranal.gurunath\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\obj\\",
+        "outputPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -66,11 +66,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x86": {
-          "#import": []
         }
       }
     }

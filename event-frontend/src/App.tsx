@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-do
 import EventsPage from './pages/EventsPage';
 import ReportsPage from './pages/ReportsPage';
 import BoldReportsPage from './pages/BoldReportsPage';
+import BoldReportsPageNew from "./components/ReportViewerNew";
 
 const navItems = [
   { name: 'Events', path: '/' },
   { name: 'Reports', path: '/reports' },
-  { name: 'Bold Reports', path: '/BoldReportsPage' },
+  // { name: 'Bold Reports', path: '/BoldReportsPage' },
+  { name: 'Reports View', path: '/BoldReportsPageNew' },
 ];
 
 const App: React.FC = () => (
@@ -49,7 +51,8 @@ const App: React.FC = () => (
       <Routes>
         <Route path="/" element={<EventsPage />} />
         <Route path="/reports" element={<ReportsPage />} />
-        <Route path="/BoldReportsPage" element={<BoldReportsPage />} />
+        {/* <Route path="/BoldReportsPage" element={<BoldReportsPage />} /> */}
+        <Route path="/BoldReportsPageNew" element={<BoldReportsPageNew />} />
       </Routes>
     </main>
   </Router>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vHff1/Ydb0o=",
+  "dgSpecHash": "0epAJM/qEYI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj",
+  "projectFilePath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\pranal.gurunath\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

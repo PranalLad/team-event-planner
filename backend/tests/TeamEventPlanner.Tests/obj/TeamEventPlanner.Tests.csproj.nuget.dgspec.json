@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj": {}
+    "C:\\Mitratech\\teamEventPlannerWorking\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {
+    "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj",
+        "projectUniqueName": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj",
         "projectName": "TeamEventPlanner.Core",
-        "projectPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj",
+        "projectPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj",
         "packagesPath": "C:\\Users\\pranal.gurunath\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\obj\\",
+        "outputPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj": {
+    "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj",
         "projectName": "TeamEventPlanner.Infrastructure",
-        "projectPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj",
+        "projectPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\pranal.gurunath\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Infrastructure\\obj\\",
+        "outputPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {
-                "projectPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj"
+              "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {
+                "projectPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj"
               }
             }
           }
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj": {
+    "C:\\Mitratech\\teamEventPlannerWorking\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj",
+        "projectUniqueName": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj",
         "projectName": "TeamEventPlanner.Tests",
-        "projectPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj",
+        "projectPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\tests\\TeamEventPlanner.Tests\\TeamEventPlanner.Tests.csproj",
         "packagesPath": "C:\\Users\\pranal.gurunath\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\tests\\TeamEventPlanner.Tests\\obj\\",
+        "outputPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\tests\\TeamEventPlanner.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -176,11 +176,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {
-                "projectPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj"
+              "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj": {
+                "projectPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Core\\TeamEventPlanner.Core.csproj"
               },
-              "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\pranal.gurunath\\Downloads\\team-event-planner\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj"
+              "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj": {
+                "projectPath": "C:\\Mitratech\\teamEventPlannerWorking\\backend\\TeamEventPlanner.Infrastructure\\TeamEventPlanner.Infrastructure.csproj"
               }
             }
           }

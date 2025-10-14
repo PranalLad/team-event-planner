@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamEventPlanner.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34091a403961f84a768903e72cfaa0bc799f0143")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+135b6406f9f3795f6268cf819429ce45a5a88d77")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamEventPlanner.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamEventPlanner.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
