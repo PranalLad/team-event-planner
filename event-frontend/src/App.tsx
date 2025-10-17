@@ -2,13 +2,13 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import EventsPage from './pages/EventsPage';
 import ReportsPage from './pages/ReportsPage';
-import BoldReportsPage from './pages/BoldReportsPage';
+import BoldReport  from './components/BoldReport';
 import BoldReportsPageNew from "./components/ReportViewerNew";
 
 const navItems = [
   { name: 'Events', path: '/' },
   { name: 'Reports', path: '/reports' },
-  // { name: 'Bold Reports', path: '/BoldReportsPage' },
+  { name: 'Bold Reports', path: '/bold-reports' },
   { name: 'Reports View', path: '/BoldReportsPageNew' },
 ];
 
@@ -51,7 +51,7 @@ const App: React.FC = () => (
       <Routes>
         <Route path="/" element={<EventsPage />} />
         <Route path="/reports" element={<ReportsPage />} />
-        {/* <Route path="/BoldReportsPage" element={<BoldReportsPage />} /> */}
+        <Route path="/bold-reports" element={<BoldReport  />} />
         <Route path="/BoldReportsPageNew" element={<BoldReportsPageNew />} />
       </Routes>
     </main>

@@ -1,64 +1,31 @@
-import React, { useEffect, useRef, useState } from 'react';
+/* eslint-disable */
+import React from 'react';
+import '../App.css';
+//Report Viewer source
+import '@boldreports/javascript-reporting-controls/Content/v2.0/tailwind-light/bold.report-viewer.min.css';
+import '@boldreports/javascript-reporting-controls/Scripts/v2.0/common/bold.reports.common.min';
+import '@boldreports/javascript-reporting-controls/Scripts/v2.0/common/bold.reports.widgets.min';
+import '@boldreports/javascript-reporting-controls/Scripts/v2.0/bold.report-viewer.min';
+//Reports react base
+import '@boldreports/react-reporting-components/Scripts/bold.reports.react.min';
+declare let BoldReportViewerComponent: any;
 
-interface BoldReportProps {
-  apiUrl: string;      // Backend API endpoint
-  reportName: string;  // RDL file name
-  tenantId: string;    // Tenant ID
-  start: string;       // Start date
-  end: string;         // End date
+var viewerStyle = {
+  'height': '700px',
+  'width': '100%'
+};
+
+function App() {
+  return (
+   <div style={viewerStyle}>
+    <BoldReportViewerComponent
+     id="reportviewer-container"
+    //  reportServiceUrl = {'https://localhost:59497/api/ReportViewer'}
+    reportServiceUrl = {'https://teameventplannerapi-g4hge8h2ghach2ag.canadacentral-01.azurewebsites.net/api/ReportViewer'}
+     reportPath = {'event_planner.rdl'} >
+     </BoldReportViewerComponent>
+   </div>
+  );
 }
 
-declare const $: any;
-
-export const BoldReport: React.FC<BoldReportProps> = ({ apiUrl, reportName, tenantId, start, end }) => {
-  const viewerRef = useRef<HTMLDivElement>(null);
-  const [reportData, setReportData] = useState<any>(null);
-
-  useEffect(() => {
-    const fetchReportData = async () => {
-      try {
-        const clientLocalTime = new Date().toISOString();
-        const response = await fetch(`${apiUrl}?start=${start}&end=${end}&clientLocalTime=${clientLocalTime}`, {
-          method: 'GET',
-          headers: {
-            'X-Tenant-ID': tenantId,
-            'Content-Type': 'application/json',
-          },
-        });
-
-        if (!response.ok) throw new Error('Failed to fetch report data');
-
-        const data = await response.json();
-        setReportData(data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    fetchReportData();
-  }, [apiUrl, tenantId, start, end]);
-
-  useEffect(() => {
-    const loadViewer = () => {
-      if (viewerRef.current && reportData && typeof $(viewerRef.current).boldReportViewer === 'function') {
-        $(viewerRef.current).boldReportViewer({
-          id: 'reportViewer',
-          reportServiceUrl: apiUrl,
-          reportPath: reportName,
-          parameters: [
-            { name: 'TenantId', value: tenantId },
-            { name: 'ReportGeneratedOn', value: reportData.reportGeneratedOn },
-          ],
-          toolbarSettings: { showToolbar: true },
-          height: '900px',
-        });
-      } else {
-        setTimeout(loadViewer, 100);
-      }
-    };
-
-    loadViewer();
-  }, [reportData, apiUrl, reportName, tenantId]);
-
-  return <div ref={viewerRef} style={{ width: '100%' }} />;
-};
+export default App;
