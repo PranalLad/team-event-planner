@@ -6,10 +6,13 @@ using TeamEventPlanner.Services;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+Bold.Licensing.BoldLicenseProvider.RegisterLicense("nZopOUJqW4rKMbMh8iLz0UcS7K7C3LU7e+eMd09kmkg=");
 
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllersWithViews();
 //builder.Services.AddBoldReports();
 
+//builder.Services.AddBoldReports();
 // Add services
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
@@ -37,24 +40,37 @@ builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IEventReportService, EventReportService>();
 
 // CORS
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowFrontendApps", policy =>
+//    {
+//        policy.WithOrigins(
+//                "http://localhost:3000",
+//                "http://localhost:3002",// React dev
+//                "http://localhost:3001",// React dev
+//                "https://teameventplanner.netlify.app" // Netlify production
+//            )
+//            .AllowAnyHeader()
+//            .AllowAnyMethod();
+//    });
+//});
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontendApps", policy =>
+    options.AddPolicy("AllowAllOrigins", policy =>
     {
-        policy.WithOrigins(
-                "http://localhost:3000",                // React dev
-                "https://teameventplanner.netlify.app" // Netlify production
-            )
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
     });
 });
+
 
 var app = builder.Build();
 
 // Middleware
 app.UseHttpsRedirection();
-app.UseCors("AllowFrontendApps");
+app.UseCors("AllowAllOrigins");
 
 if (app.Environment.IsDevelopment())
 {

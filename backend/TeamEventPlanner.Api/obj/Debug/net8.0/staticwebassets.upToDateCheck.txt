@@ -1,0 +1,2 @@
+wwwroot\event_planner.rdl
+wwwroot\Resources\event_planner.rdl

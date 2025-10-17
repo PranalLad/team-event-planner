@@ -1,3 +1,4 @@
+using BoldReports.Web.ReportViewer;
 using Microsoft.AspNetCore.Mvc;
 using TeamEventPlanner.Core.Models;
 using TeamEventPlanner.Services;
@@ -47,6 +48,7 @@ namespace TeamEventPlanner.Api.Controllers
             // Return RDL file as JSON for Bold Reports React Viewer
             return File(System.IO.File.ReadAllBytes(reportPath), "application/octet-stream");
         }
+
 
         [HttpGet("Bold")]
         public async Task<IActionResult> GetBoldReportData(
