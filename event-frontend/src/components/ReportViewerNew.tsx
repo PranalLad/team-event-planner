@@ -76,7 +76,7 @@ const BoldReport: React.FC = () => {
     setLoading(true);
     try {
       const response = await axios.get<Report>(
-        `https://teameventplannerapi-g4hge8h2ghach2ag.canadacentral-01.azurewebsites.net/api/reports/bold?start=${startDate}T00:00:00&end=${endDate}T23:59:59&clientLocalTime=2025-10-13T12:00:00`,
+        `https://teameventplannerapi-g4hge8h2ghach2ag.canadacentral-01.azurewebsites.net/api/reports/bold?start=${startDate}T00:00:00&end=${endDate}T23:59:59&clientLocalTime=${new Date().toISOString()}`,
         {
           headers: {
             "X-Tenant-ID": tenantId,
@@ -122,12 +122,15 @@ const BoldReport: React.FC = () => {
     setPage(0);
   };
 
+  const formatLocalDate = (dateStr: string) =>
+    new Date(dateStr).toLocaleString();
+
   const exportToExcel = () => {
     if (!report) return;
     const dataForExcel = report.data.map((event) => ({
       "Event Name": event.name,
-      "Start Time": new Date(event.startTime).toLocaleString(),
-      "End Time": new Date(event.endTime).toLocaleString(),
+      "Start Time": formatLocalDate(event.startTime),
+      "End Time": formatLocalDate(event.endTime),
       Venue: event.venue,
       Attendees: event.attendees.map((a) => a.name).join(", "),
     }));
@@ -148,8 +151,8 @@ const BoldReport: React.FC = () => {
     report.data.forEach((event) => {
       const rowData = [
         event.name,
-        new Date(event.startTime).toLocaleString(),
-        new Date(event.endTime).toLocaleString(),
+        formatLocalDate(event.startTime),
+        formatLocalDate(event.endTime),
         event.venue,
         event.attendees.map((a) => a.name).join(", "),
       ];
@@ -169,7 +172,7 @@ const BoldReport: React.FC = () => {
         Bold Report Dashboard
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
-        Report Generated On: {new Date(report.reportGeneratedOn).toLocaleString()}
+        Report Generated On: {formatLocalDate(report.reportGeneratedOn)}
       </Typography>
 
       <Box display="flex" gap={2} flexWrap="wrap" marginBottom={2}>
@@ -263,8 +266,8 @@ const BoldReport: React.FC = () => {
             .map((event) => (
               <TableRow key={event.id}>
                 <TableCell>{event.name}</TableCell>
-                <TableCell>{new Date(event.startTime).toLocaleString()}</TableCell>
-                <TableCell>{new Date(event.endTime).toLocaleString()}</TableCell>
+                <TableCell>{formatLocalDate(event.startTime)}</TableCell>
+                <TableCell>{formatLocalDate(event.endTime)}</TableCell>
                 <TableCell>{event.venue}</TableCell>
                 <TableCell>{event.attendees.map((a) => a.name).join(", ")}</TableCell>
               </TableRow>
