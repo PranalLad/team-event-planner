@@ -23,30 +23,28 @@ import { saveAs } from "file-saver";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 
-// Extend jsPDF to include autoTable
 interface jsPDFWithAutoTable extends jsPDF {
   autoTable: (options: any) => jsPDF;
 }
 
-// TypeScript interfaces
 interface Attendee {
-  id: string;
-  name: string;
-  email: string;
+  id?: string;
+  name?: string;
+  email?: string;
 }
 
 interface Event {
-  id: string;
-  name: string;
-  startTime: string;
-  endTime: string;
-  venue: string;
-  attendees: Attendee[];
+  id?: string;
+  name?: string;
+  startTime?: string;
+  endTime?: string;
+  venue?: string;
+  attendees?: Attendee[];
 }
 
 interface Report {
-  reportGeneratedOn: string;
-  data: Event[];
+  reportGeneratedOn?: string;
+  data?: Event[];
 }
 
 type Order = "asc" | "desc";
@@ -70,51 +68,72 @@ const BoldReport: React.FC = () => {
 
   useEffect(() => {
     fetchReport();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startDate, endDate, tenantId]);
 
+  // --- Fetch and normalize data ---
   const fetchReport = async () => {
     setLoading(true);
     try {
       const response = await axios.get<Report>(
         `https://teameventplannerapi-g4hge8h2ghach2ag.canadacentral-01.azurewebsites.net/api/reports/bold?start=${startDate}T00:00:00&end=${endDate}T23:59:59&clientLocalTime=${new Date().toISOString()}`,
-        {
-          headers: {
-            "X-Tenant-ID": tenantId,
-          },
-        }
+        { headers: { "X-Tenant-ID": tenantId } }
       );
-      setReport(response.data);
+
+      // Normalize: ensure `data` and `attendees` are arrays
+      const normalized: Report = {
+        reportGeneratedOn: response.data.reportGeneratedOn,
+        data: Array.isArray(response.data.data)
+          ? response.data.data.map(event => ({
+              ...event,
+              attendees: Array.isArray(event.attendees) ? event.attendees : [],
+            }))
+          : [],
+      };
+
+      setReport(normalized);
     } catch (error) {
       console.error("Error fetching report:", error);
+      setReport(null);
     } finally {
       setLoading(false);
     }
   };
 
+  // --- Sorting ---
   const handleSort = (property: keyof Event) => {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
     setOrderBy(property);
   };
 
-  const sortedData = report?.data
-    .filter((event) =>
-      event.attendees.some((a) =>
-        a.name.toLowerCase().includes(searchTerm.toLowerCase())
+  // --- Prepare sorted and filtered data ---
+  const sortedData: Event[] = (report?.data ?? [])
+    .filter(event => Array.isArray(event.attendees))
+    .filter(event =>
+      event.attendees!.some(a =>
+        a.name?.toLowerCase().includes(searchTerm.toLowerCase())
       )
     )
     .sort((a, b) => {
-      if (orderBy === "startTime" || orderBy === "endTime") {
-        const dateA = new Date(a[orderBy]);
-        const dateB = new Date(b[orderBy]);
+      const aValue = a[orderBy];
+      const bValue = b[orderBy];
+
+      if ((orderBy === "startTime" || orderBy === "endTime") &&
+          typeof aValue === "string" && typeof bValue === "string") {
         return order === "asc"
-          ? dateA.getTime() - dateB.getTime()
-          : dateB.getTime() - dateA.getTime();
+          ? new Date(aValue).getTime() - new Date(bValue).getTime()
+          : new Date(bValue).getTime() - new Date(aValue).getTime();
       }
-      return order === "asc"
-        ? (a[orderBy] as string).localeCompare(b[orderBy] as string)
-        : (b[orderBy] as string).localeCompare(a[orderBy] as string);
-    }) || [];
+
+      if (typeof aValue === "string" && typeof bValue === "string") {
+        return order === "asc"
+          ? aValue.localeCompare(bValue)
+          : bValue.localeCompare(aValue);
+      }
+
+      return 0;
+    });
 
   const handleChangePage = (_event: unknown, newPage: number) => setPage(newPage);
   const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -122,39 +141,43 @@ const BoldReport: React.FC = () => {
     setPage(0);
   };
 
-  const formatLocalDate = (dateStr: string) =>
-    new Date(dateStr).toLocaleString();
+  const formatLocalDate = (dateStr?: string) =>
+    dateStr ? new Date(dateStr).toLocaleString() : "N/A";
 
+  // --- Export ---
   const exportToExcel = () => {
-    if (!report) return;
-    const dataForExcel = report.data.map((event) => ({
-      "Event Name": event.name,
+    if (!report?.data) return;
+    const dataForExcel = report.data.map(event => ({
+      "Event Name": event.name ?? "N/A",
       "Start Time": formatLocalDate(event.startTime),
       "End Time": formatLocalDate(event.endTime),
-      Venue: event.venue,
-      Attendees: event.attendees.map((a) => a.name).join(", "),
+      Venue: event.venue ?? "N/A",
+      Attendees: Array.isArray(event.attendees)
+        ? event.attendees.map(a => a.name ?? "Unknown").join(", ")
+        : "No attendees",
     }));
     const worksheet = XLSX.utils.json_to_sheet(dataForExcel);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Bold Report");
     const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
-    const blob = new Blob([excelBuffer], { type: "application/octet-stream" });
-    saveAs(blob, "BoldReport.xlsx");
+    saveAs(new Blob([excelBuffer], { type: "application/octet-stream" }), "BoldReport.xlsx");
   };
 
   const exportToPDF = () => {
-    if (!report) return;
+    if (!report?.data) return;
     const doc = new jsPDF() as jsPDFWithAutoTable;
     const tableColumn = ["Event Name", "Start Time", "End Time", "Venue", "Attendees"];
     const tableRows: any[] = [];
 
-    report.data.forEach((event) => {
+    report.data.forEach(event => {
       const rowData = [
-        event.name,
+        event.name ?? "N/A",
         formatLocalDate(event.startTime),
         formatLocalDate(event.endTime),
-        event.venue,
-        event.attendees.map((a) => a.name).join(", "),
+        event.venue ?? "N/A",
+        Array.isArray(event.attendees)
+          ? event.attendees.map(a => a.name ?? "Unknown").join(", ")
+          : "No attendees",
       ];
       tableRows.push(rowData);
     });
@@ -180,20 +203,20 @@ const BoldReport: React.FC = () => {
           label="Search Attendee"
           variant="outlined"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={e => setSearchTerm(e.target.value)}
         />
         <TextField
           label="Start Date"
           type="date"
           value={startDate}
-          onChange={(e) => setStartDate(e.target.value)}
+          onChange={e => setStartDate(e.target.value)}
           InputLabelProps={{ shrink: true }}
         />
         <TextField
           label="End Date"
           type="date"
           value={endDate}
-          onChange={(e) => setEndDate(e.target.value)}
+          onChange={e => setEndDate(e.target.value)}
           InputLabelProps={{ shrink: true }}
         />
         <FormControl>
@@ -201,12 +224,10 @@ const BoldReport: React.FC = () => {
           <Select
             value={tenantId}
             label="Tenant"
-            onChange={(e) => setTenantId(e.target.value)}
+            onChange={e => setTenantId(e.target.value)}
           >
-            {tenants.map((t) => (
-              <MenuItem key={t.id} value={t.id}>
-                {t.name}
-              </MenuItem>
+            {tenants.map(t => (
+              <MenuItem key={t.id} value={t.id}>{t.name}</MenuItem>
             ))}
           </Select>
         </FormControl>
@@ -261,23 +282,33 @@ const BoldReport: React.FC = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {sortedData
-            ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-            .map((event) => (
-              <TableRow key={event.id}>
-                <TableCell>{event.name}</TableCell>
-                <TableCell>{formatLocalDate(event.startTime)}</TableCell>
-                <TableCell>{formatLocalDate(event.endTime)}</TableCell>
-                <TableCell>{event.venue}</TableCell>
-                <TableCell>{event.attendees.map((a) => a.name).join(", ")}</TableCell>
-              </TableRow>
-            ))}
+          {sortedData.length === 0 ? (
+            <TableRow>
+              <TableCell colSpan={5} align="center">No events found</TableCell>
+            </TableRow>
+          ) : (
+            sortedData
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map(event => (
+                <TableRow key={event.id ?? Math.random()}>
+                  <TableCell>{event.name ?? "N/A"}</TableCell>
+                  <TableCell>{formatLocalDate(event.startTime)}</TableCell>
+                  <TableCell>{formatLocalDate(event.endTime)}</TableCell>
+                  <TableCell>{event.venue ?? "N/A"}</TableCell>
+                  <TableCell>
+                    {Array.isArray(event.attendees) && event.attendees.length > 0
+                      ? event.attendees.map(a => a.name ?? "Unknown").join(", ")
+                      : "No attendees"}
+                  </TableCell>
+                </TableRow>
+              ))
+          )}
         </TableBody>
       </Table>
 
       <TablePagination
         component="div"
-        count={sortedData?.length || 0}
+        count={sortedData.length}
         page={page}
         onPageChange={handleChangePage}
         rowsPerPage={rowsPerPage}
